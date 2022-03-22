@@ -1,4 +1,5 @@
 import React from 'react';
+import { FlatList } from 'react-native';
 
 import { HighlightCard } from '../../components/HighlightCard';
 import { TransactionCard, TransactionCardProps } from '../../components/TransactionCard';
@@ -34,7 +35,7 @@ export function Dashboard() {
         name: 'Vendas',
         icon: 'dollar-sign'
       },
-      date: '13/03/1992',
+      date: '13/03/2022',
     },
     {
       id: '2',
@@ -42,10 +43,10 @@ export function Dashboard() {
       title: 'X Ratão',
       amount: 'R$ 35,00',
       category: {
-        name: 'Casa',
+        name: 'Alimentação',
         icon: 'coffee'
       },
-      date: '13/03/1992',
+      date: '05/02/2022',
     },
     {
       id: '3',
@@ -53,7 +54,7 @@ export function Dashboard() {
       title: 'Internet',
       amount: 'R$ 109,90',
       category: {
-        name: 'Vendas',
+        name: 'Contas',
         icon: 'shopping-bag'
       },
       date: '13/03/1992',
@@ -73,6 +74,7 @@ export function Dashboard() {
 
   return (
     <Container>
+
       <Header>
 
         <UserWrapper>
@@ -120,6 +122,7 @@ export function Dashboard() {
         />
 
       </Transactions>
+
     </Container>
   )
 }
