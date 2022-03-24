@@ -35,7 +35,6 @@ export function CategorySelect({
 
   const handleSelectCategory = (category: Category) => {
     setCategory(category);
-    console.log(category);
   }
 
   return (
