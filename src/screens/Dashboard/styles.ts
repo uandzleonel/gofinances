@@ -3,7 +3,7 @@ import { FlatList, FlatListProps } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { RFValue, RFPercentage } from 'react-native-responsive-fontsize';
 import { getStatusBarHeight, getBottomSpace } from 'react-native-iphone-x-helper';
-import { DataListProps } from '.';
+import { TransactionListProps } from '.';
 
 export const Container = styled.View`
   flex: 1;
@@ -93,10 +93,21 @@ export const Title = styled.Text`
 `;
 
 export const TransactionList = styled(
-  FlatList as new (props: FlatListProps<DataListProps>) => FlatList<DataListProps>
+  FlatList as new (props: FlatListProps<TransactionListProps>) => FlatList<TransactionListProps>
 ).attrs({
   showsVerticalScrollIndicator: false,
   contentContainerStyle: {
     paddingBottom: getBottomSpace()
   }
 })``;
+
+export const LoadContainer = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const LoadIndicator = styled.ActivityIndicator.attrs(({ theme }) => ({
+  color: theme.colors.primary,
+  size: 'large',
+}))``;
