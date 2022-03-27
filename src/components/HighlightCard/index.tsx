@@ -42,7 +42,7 @@ export function HighlightCard({
       </Header>
 
       <Footer>
-        <Amount type={type}>
+        <Amount numberOfLines={1} type={type}>
           {amount}
         </Amount>
         <LastTransaction type={type}>
