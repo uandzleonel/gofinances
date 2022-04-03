@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Platform, Text, TouchableOpacity } from 'react-native';
+import { Platform } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
