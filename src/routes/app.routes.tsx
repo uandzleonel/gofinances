@@ -4,6 +4,7 @@ import { useTheme } from 'styled-components';
 import { MaterialIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+import { SignIn } from '../screens/SignIn'
 import { Dashboard } from '../screens/Dashboard';
 import { Register } from '../screens/Register';
 import { Resume } from '../screens/Resume';
@@ -26,6 +27,20 @@ export function AppRoutes() {
         }
       }}
     >
+      <Screen
+        name='SigIn'
+        component={SignIn}
+        options={{
+          tabBarIcon: (({ size, color }) =>
+            <MaterialIcons
+              name='login'
+              size={size}
+              color={color}
+            />
+          )
+        }}
+      />
+
       <Screen
         name='Listagem'
         component={Dashboard}
